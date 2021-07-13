@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>lich 2021</title>
+</head>
+<body>
+<form>
+    <input type="text" id="input-month">
+    <button type="button" onclick="number()" value=" tinh so ngay"> tinh so ngay</button>
+<!--  khai bao id de hien ra gia tri cuoi cung-->
+    <p id="result"></p>
+
+</form>
+<script>
+ function number() {
+     // so nhap vao phai chuyen tu kieu sang number
+
+     let inputNumber = parseInt(document.getElementById("input-month").value);
+     // switch voi function phai khac bien nhau
+     switch (inputNumber){
+         case 1:
+         case 3:
+         case 5:
+         case 7:
+         case 8:
+         case 10:
+         case 12:
+             result= "thang co 31 ngay";
+             break;
+
+         case 2:
+             result="thang co 28 hoac 29 ngay";
+             break;
+        default:
+             result="thang co 31 ngay";
+             break;
+
+
+     }
+       // doan code nay la de in gia tri result ra man hinh
+     document.getElementById("result").innerText = result;
+
+ }
+
+</script>
+
+
+</body>
+</html>
